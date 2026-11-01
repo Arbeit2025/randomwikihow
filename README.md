@@ -10,7 +10,7 @@
 
 ## 仕組み
 
-記事の取得はサーバー側で行います。WikiHow には MediaWiki の `Special:Random` が無いため、ランダム記事へリダイレクトする `https://www.wikihow.jp/Special:Randomizer` を使い、遷移先の記事ページの OGP 情報（og:title / og:description / og:image）からタイトル・概要・画像を抜き出して表示します。通信に失敗した場合はエラーメッセージと再試行ボタンが表示されます。
+記事の取得はサーバー側で行います。WikiHow には MediaWiki の `Special:Random` が無いため、ランダム記事へリダイレクトする `Special:Randomizer` を使い、遷移先の記事ページの OGP 情報（og:title / og:description / og:image）からタイトル・概要・画像を抜き出して表示します。取得は日本語版（www.wikihow.jp）→ 英語版（www.wikihow.com）の順に試します。WikiHow 側のボット対策（チャレンジページ等）でサーバーから取得できない場合は、記事の代わりに「WikiHowで直接ランダム記事を開く」ボタンを表示します（利用者のブラウザから開けばランダム記事が表示されます）。
 
 ## ローカル実行
 
